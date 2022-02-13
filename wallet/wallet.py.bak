@@ -1,0 +1,84 @@
+#[ ] TODO's
+#[ ] Must have a user.
+#[ ] Create a function that will route through a main menu.
+#[ ] Maintain hold a balance that can be deposited/withdrawn and then updated.
+#[ ] Need to be able to check the current balance. 
+#[ ] Be able to exit the program.
+
+
+class Wallet:
+    user=""
+    user=""
+    def __init__(self, user=""):
+        self.user = user
+        var = input("enter username: ", )
+        print(f"Current User: {user}")
+        print("[0] Deposit")
+        print("[1] Withdraw")
+        print("[2] Check Balance")
+        print("[3] EXIT")
+        print(" ")
+        input("Please enter number for the corresponding menu item : ", )
+
+    def menu():
+        print(f"Current User: {user}")
+        print("[0] Deposit")
+        print("[1] Withdraw")
+        print("[2] Check Balance")
+        print("[3] EXIT")
+        print(" ")
+        input("Please enter number for the corresponding menu item : ", )
+
+    def checkbal():
+        return f"Balance: {balance}"
+
+    def deposit(balance):
+        dep_num = input("Please enter number for the corresponding menu item", )
+        balance = balance - dep_num
+        print(f"Your new balance is: {balance}")
+
+    def withdrawal(balance):
+        wit_num = input("Please enter number for the corresponding menu item", ) 
+        balance = balance - wit_num 
+        print(f"Your new balance is: {balance}")
+
+    def cbalance(balance):
+        print(f"Your new balance is: {balance}")
+
+    def menu_func():
+        choice = input("Please enter number for the corresponding menu item : ", )
+        menu()
+        if choice == 0 :
+            deposit()
+            menu()
+        elif choice == 1:
+            withdrawal()
+            menu()
+        elif choice == 2:
+            cbalance()
+            menu()
+        elif choice == 3:
+            print("exiting")
+            return 0
+        else: 
+            print(f"option {choice} not found please enter a menu option")
+            menu()
+        #run
+
+        balance = 0 
+
+        user = input("enter username: ", )
+
+        menu()
+
+        menu_func()
+wl = Wallet()
+wl.menu()
+    
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#class Wallet:
+
+
